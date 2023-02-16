@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import GenreFilter from './components/GenreFilter';
 import Playlist from './components/Playlist';
@@ -7,10 +7,13 @@ import SongForm from './components/SongForm';
 function App() {
   const [songs, setSongs] = useState([])
 
+  useEffect(() => {
   fetch('http://localhost:3000/Songs')
   .then(r => r.json())
-  .then((songs) => setSongs(songs) )
-  console.log(songs, "in App")
+  .then((songs) => setSongs(songs));
+  }, []);
+
+
   
   return (
     <div className="App">

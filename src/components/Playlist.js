@@ -1,20 +1,18 @@
 import React from "react";
-
+import SongItem from "./SongItem";
 
 function Playlist ({songs}) {
 
-const songList = songs.map(song => {
     return (
-    <Playlist
-    key={song.id}
-    name={song.name}
-    artist={song.artist}
-    genre={song.genre} />
-)});
-
-console.log(songs, "in playlist")
-    return (
-        <ul>{songList}</ul>
+        <section>
+            <ul>
+            {
+                songs.map(song => {
+                    return <SongItem key={song.id} song={song} />
+                })
+            }
+            </ul>
+        </section>
     )
 }
 
