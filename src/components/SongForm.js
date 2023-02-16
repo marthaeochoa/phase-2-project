@@ -10,6 +10,18 @@ function SongForm () {
          <label htmlFor="artist">Artist</label>
          <input type="text" name="artist" id="artist"/>
 
+         <label htmlFor="genre">Genre</label>
+
+        <select name="genre" id="genre">
+            <option value="pop">Pop</option>
+            <option value="rnb">R&B</option>
+            <option value="alternative">Alternative</option>
+            <option value="reggaeton">Reggaeton</option>
+            <option value="rap">Rap</option>
+            
+        </select>
+
+
          <button type="submit">Add Song</button>
         </form>
     )
