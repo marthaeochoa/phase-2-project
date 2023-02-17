@@ -5,7 +5,7 @@ function Playlist ({songs}) {
 
     return (
         <section>
-            <table>
+            <table className="song-table">
             {
                 songs.map(song => {
                     return (
