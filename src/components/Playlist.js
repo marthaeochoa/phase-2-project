@@ -5,13 +5,18 @@ function Playlist ({songs}) {
 
     return (
         <section>
-            <ul>
+            <table>
             {
                 songs.map(song => {
-                    return <SongItem key={song.id} song={song} />
+                    return (
+                    <SongItem 
+                    key={song.id} 
+                    song={song} 
+                    />
+                 )
                 })
             }
-            </ul>
+            </table>
         </section>
     )
 }

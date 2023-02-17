@@ -2,7 +2,11 @@ import React from "react";
 
 function SongItem({song}) {
     return(
-        <li>{song.name}, {song.artist}            {song.genre}</li>
+       <tr className="song">
+        <td>{song.name}</td>
+        <td>{song.artist}</td>
+        <td>{song.genre}</td>
+        </tr>
     )
 }
 
