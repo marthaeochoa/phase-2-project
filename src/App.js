@@ -6,7 +6,7 @@ import SongForm from './components/SongForm';
 
 function App() {
   const [songs, setSongs] = useState([])
-  const [genre, setGenre] = useState('All')
+  // const [genre, setGenre] = useState('All')
 
   useEffect(() => {
   fetch('http://localhost:3000/Songs')
