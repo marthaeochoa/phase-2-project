@@ -2,7 +2,7 @@ import React from "react"
 
 function GenreFilter () {
     return (
-        <div>
+        <div className="filter">
             <button>Pop</button>
             <button>R&B</button>
             <button>Alternative</button>
