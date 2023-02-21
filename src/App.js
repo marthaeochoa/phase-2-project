@@ -24,8 +24,8 @@ function App() {
       <header className="App-header">
         <h1>My Project</h1>
       </header>
-      <GenreFilter  />
       <SongForm />
+      <GenreFilter  />
       <Playlist songs={songs}/>
       
     

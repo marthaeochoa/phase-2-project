@@ -3,7 +3,7 @@ import React from "react";
 function SongForm () {
     return(
         <form className="form">
-         <h3>Add You Music!</h3> 
+         <h3>Add Your Music!</h3> 
          <label htmlFor="title">Title</label>
          <input type="text" name="title" id="title"/>
 

@@ -5,11 +5,11 @@ function Playlist ({songs}) {
 
     return (
         <section>
-            <table className="song-table">
+            <table>
             <tr>
-                    <td><h3>Title</h3></td>
-                    <td><h3>Artist</h3></td>
-                    <td><h3>Genre</h3></td>
+                    <td className="headers"><h3>Title</h3></td>
+                    <td className="headers"><h3>Artist</h3></td>
+                    <td className="headers"><h3>Genre</h3></td>
              </tr>
             {
                 songs.map(song => {

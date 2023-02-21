@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(-180deg, #adcdeb, #082031);
 }
 
 code {
@@ -27,22 +28,24 @@ button{
   text-align: center;
   cursor: pointer;
   width: 85px;
+  margin-left: 10px;
   border: 0;
 }
 
-table, tr, td{
+ table, tr, td{
   border: 2px solid black;
   margin-left: auto;
   margin-right: auto;
   width: 900px;
   text-align: left;
+  background-color: white;
 }
 
 .filter {
   margin-top: 10px;
   margin-bottom: 10px;
   height: 40px;
-  width: 500px;
+  width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -53,4 +56,9 @@ table, tr, td{
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
+}
+
+td.headers{
+  text-align: center;
+  background-image: linear-gradient(-180deg, #537ba0, #1d3546);
 }
