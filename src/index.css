@@ -32,13 +32,21 @@ button{
   border: 0;
 }
 
- table, tr, td{
+ table, tr {
   border: 2px solid black;
   margin-left: auto;
   margin-right: auto;
   width: 900px;
   text-align: left;
   background-color: white;
+}
+
+td {
+width: 900px;
+}
+
+tr:nth-child(odd) {
+  background-image: linear-gradient(-180deg, #a7cff0, #79a9cf )
 }
 
 .filter {
@@ -61,4 +69,5 @@ button{
 td.headers{
   text-align: center;
   background-image: linear-gradient(-180deg, #537ba0, #1d3546);
+  border: 2px solid black ;
 }
