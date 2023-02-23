@@ -15,17 +15,23 @@ function App() {
   }, []);
 
   function handleClick (){
-  
-  } 
+
+  }
+
+  function onAddSong(newSong){
+    setSongs(songs => {
+      return [...songs, newSong]
+    })
+  }
 
   
   return (
     <div className="App">
       <header className="App-header">
-        <h1>My Project</h1>
+
       </header>
-      <SongForm />
-      <GenreFilter  />
+      <SongForm onAddSong={onAddSong} />
+      <GenreFilter genre={genre} />
       <Playlist songs={songs}/>
       
     

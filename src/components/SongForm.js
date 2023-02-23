@@ -1,30 +1,31 @@
 import React, {useState} from "react";
 
-function SongForm () {
-    const [title, setTitle] = useState("")
-    const [artist, setArtist] = useState("")
-    const [genre, setGenre] = useState("Pop")
+function SongForm ({ onAddSong }) {
+    const [formData, setFormData] = useState({
+        title:"",
+        artist:"",
+        genre:"Pop"
+    })
 
-   function handleTitleChange(event){
-    setTitle(event.target.value)
-   }
+    function handleOnChange(event){
+        const { name, value } = event.target;
 
-   function handleArtistChange(event){
-    setArtist(event.target.value)
-   }
+        setFormData(formData => {
+            return {
+                ...formData,
+            [name]: value }
+        })
+    }
 
-   function handleGenreChange(event){
-    setGenre(event.target.value)
-   }
+    console.log(formData)
 
    function handleSubmit(event){
-    event.preventDefault()
+    event.preventDefault();
+    onAddSong(formData);
    }
 
-   console.log(title, artist, genre)
-
     return(
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
          <h3>Add Your Music!</h3> 
          <label htmlFor="title">Title</label>
          <input 
@@ -32,8 +33,8 @@ function SongForm () {
          name="title" 
          id="title" 
          placeholder="Song Title"
-         onChange={handleTitleChange}
-         value={title}
+         onChange={handleOnChange}
+         value={formData.title}
          />
 
          <label htmlFor="artist">Artist</label>
@@ -42,13 +43,13 @@ function SongForm () {
          name="artist" 
          id="artist" 
          placeholder="Artist Name"
-         onChange={handleArtistChange}
-         value={artist}
+         onChange={handleOnChange}
+         value={formData.artist}
          />
 
          <label htmlFor="genre">Genre</label>
 
-        <select name="genre" id="genre" value={genre} onChange={handleGenreChange}>
+        <select name="genre" id="genre" value={formData.genre} onChange={handleOnChange}>
             <option value="pop">Pop</option>
             <option value="rnb">R&B</option>
             <option value="alternative">Alternative</option>
@@ -58,7 +59,7 @@ function SongForm () {
         </select>
 
 
-         <button type="submit" onSubmit={handleSubmit}>Add Song</button>
+         <button type="submit">Add Song</button>
         </form>
     )
 }

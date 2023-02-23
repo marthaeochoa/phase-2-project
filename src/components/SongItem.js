@@ -1,9 +1,9 @@
 import React from "react";
 
-function SongItem({song}) {
+function SongItem({ song }) {
     return(
        <tr className="song">
-        <td>{song.name}</td>
+        <td>{song.title}</td>
         <td>{song.artist}</td>
         <td>{song.genre}</td>
         </tr>
