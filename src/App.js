@@ -3,6 +3,7 @@ import './App.css';
 import GenreFilter from './components/GenreFilter';
 import Playlist from './components/Playlist';
 import SongForm from './components/SongForm';
+import NavBar from './components/NavBar';
 
 function App() {
   const [songs, setSongs] = useState([]);
@@ -33,8 +34,7 @@ function App() {
       <header className="App-header">
 
       </header>
-      
-      <SongForm onAddSong={onAddSong} />
+      <NavBar navBarClick={onAddSong}/>
       <GenreFilter setGenre={setGenre} />
       <Playlist songs={songs}/>
       
