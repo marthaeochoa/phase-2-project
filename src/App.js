@@ -5,18 +5,21 @@ import Playlist from './components/Playlist';
 import SongForm from './components/SongForm';
 
 function App() {
-  const [songs, setSongs] = useState([])
-  const [genre, setGenre] = useState('All')
+  const [songs, setSongs] = useState([]);
+  const [genre, setGenre] = useState("");
 
   useEffect(() => {
-  fetch('http://localhost:3000/Songs')
+    let url;
+    if (genre) {
+      url = `http://localhost:3000/Songs?genre=${genre}`
+    } else {
+      url = "http://localhost:3000/Songs"
+    };
+  fetch(url)
   .then(r => r.json())
   .then((songs) => setSongs(songs));
-  }, []);
+  }, [genre]);
 
-  function handleClick (){
-
-  }
 
   function onAddSong(newSong){
     setSongs(songs => {
@@ -30,8 +33,9 @@ function App() {
       <header className="App-header">
 
       </header>
+      
       <SongForm onAddSong={onAddSong} />
-      <GenreFilter genre={genre} />
+      <GenreFilter setGenre={setGenre} />
       <Playlist songs={songs}/>
       
     

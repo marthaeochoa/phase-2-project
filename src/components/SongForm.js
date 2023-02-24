@@ -4,7 +4,7 @@ function SongForm ({ onAddSong }) {
     const [formData, setFormData] = useState({
         title:"",
         artist:"",
-        genre:"Pop"
+        genre:" "
     })
 
     function handleOnChange(event){
@@ -21,7 +21,25 @@ function SongForm ({ onAddSong }) {
 
    function handleSubmit(event){
     event.preventDefault();
-    onAddSong(formData);
+
+    fetch("http://localhost:3000/Songs", {
+        method: "POST",
+        headers: {
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then((r) => r.json())
+    .then((newSong) => {
+         onAddSong(newSong);
+
+    })
+
+    setFormData({
+        title:"",
+        artist:"",
+        genre:" "
+    })
    }
 
     return(
@@ -50,11 +68,12 @@ function SongForm ({ onAddSong }) {
          <label htmlFor="genre">Genre</label>
 
         <select name="genre" id="genre" value={formData.genre} onChange={handleOnChange}>
-            <option value="pop">Pop</option>
-            <option value="rnb">R&B</option>
-            <option value="alternative">Alternative</option>
-            <option value="reggaeton">Reggaeton</option>
-            <option value="rap">Rap</option>
+            <option> </option>
+            <option value="Pop">Pop</option>
+            <option value="RnB">RnB</option>
+            <option value="Alternative">Alternative</option>
+            <option value="Reggaeton">Reggaeton</option>
+            <option value="Rap">Rap</option>
             
         </select>
 

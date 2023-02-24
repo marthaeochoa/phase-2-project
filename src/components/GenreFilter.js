@@ -1,19 +1,15 @@
 import React from "react"
 
-function GenreFilter ({genre, handleClick}) {
-
-function handleOnClick(){
-    handleClick()
-}
+function GenreFilter ({ setGenre }) {
 
     return (
         <div className="filter">
-            <button onClick={handleOnClick}>All</button>
-            <button>Pop</button>
-            <button>R&B</button>
-            <button>Alternative</button>
-            <button>Reggaeton</button>
-            <button>Rap</button>
+            <button onClick={() => setGenre("")} >All</button>
+            <button onClick={() => setGenre("Pop")}>Pop</button>
+            <button onClick={() => setGenre("RnB")}>RnB</button>
+            <button onClick={() => setGenre("Alternative")}>Alternative</button>
+            <button onClick={() => setGenre("Reggaeton")}>Reggaeton</button>
+            <button onClick={() => setGenre("Rap")}>Rap</button>
         </div>
     )
 }
