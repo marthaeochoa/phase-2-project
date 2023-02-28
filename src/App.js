@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import GenreFilter from './components/GenreFilter';
 import Playlist from './components/Playlist';
 import SongForm from './components/SongForm';
-import NavBar from './components/NavBar';
+
 
 function App() {
   const [songs, setSongs] = useState([]);
@@ -34,11 +35,15 @@ function App() {
       <header className="App-header">
 
       </header>
-      <NavBar navBarClick={onAddSong}/>
-      <GenreFilter setGenre={setGenre} />
-      <Playlist songs={songs}/>
-      
-    
+      <Switch>
+        <Route exact path="/">
+        <GenreFilter setGenre={setGenre} />
+        <Playlist songs={songs}/>
+        </Route>
+        <Route path="/song-form">
+        <SongForm onAddSong={onAddSong} />
+        </Route>
+      </Switch>
     </div>
   );
 }

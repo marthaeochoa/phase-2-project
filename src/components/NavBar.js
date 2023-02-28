@@ -1,11 +1,7 @@
 import React from "react";
-import SongForm from "./SongForm";
 
-function NavBar({ onAddSong }) {
- 
-    function handleNavBarClick () {
-    <SongForm onAddSong={onAddSong} />
-    }
+function NavBar() {
+
 
     return (
         <section className="Nav-Bar">
