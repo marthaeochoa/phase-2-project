@@ -1,14 +1,15 @@
 import React from "react";
+import { NavLink, Link } from "react-router-dom";
+import SongForm from "./SongForm";
 
 function NavBar() {
 
 
     return (
-        <section className="Nav-Bar">
-        <button className="nav-button">Home</button>
-        <button className="nav-button" 
-        onClick={handleNavBarClick}>Add New Song</button>
-        </section>
+        <nav className="Nav-Bar">
+        <NavLink className="nav-button" exact to="/">Home</NavLink>
+        <NavLink className="nav-button" to="/song-form">Add New Song</NavLink>
+        </nav>
     )
 }
 
