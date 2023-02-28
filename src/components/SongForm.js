@@ -35,6 +35,8 @@ function SongForm ({ onAddSong }) {
 
     })
 
+    alert("Song Added")
+
     setFormData({
         title:"",
         artist:"",
@@ -44,8 +46,9 @@ function SongForm ({ onAddSong }) {
 
     return(
         <form className="form" onSubmit={handleSubmit}>
-         <h3>Add Your Music!</h3> 
-         <label htmlFor="title">Title</label>
+         <h2>Add Your Music!</h2> 
+
+         <label htmlFor="title"><h3>Title</h3></label>
          <input 
          type="text" 
          name="title" 
@@ -55,7 +58,7 @@ function SongForm ({ onAddSong }) {
          value={formData.title}
          />
 
-         <label htmlFor="artist">Artist</label>
+         <label htmlFor="artist"><h3>Artist</h3></label>
          <input 
          type="text" 
          name="artist" 
@@ -65,7 +68,7 @@ function SongForm ({ onAddSong }) {
          value={formData.artist}
          />
 
-         <label htmlFor="genre">Genre</label>
+         <label htmlFor="genre"><h3>Genre</h3></label>
 
         <select name="genre" id="genre" value={formData.genre} onChange={handleOnChange}>
             <option> </option>
