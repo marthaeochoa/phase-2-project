@@ -7,9 +7,7 @@ This application shows you what songs are in my current favorites playlist. It i
 You will need to fork and clone [This JSON server](https://github.com/marthaeochoa/json-server-template) repo into your machine and run it.
 
 Fork and clone this repo then cd into the file.\
-Run `npm start`
-
-To view in your browser. (You will have to type `y` when prompted since localhost:3000 is already in use).
+Run `npm start` to view in your browser. (You will have to type `y` when prompted since localhost:3000 is already in use).
 
 ## Usage
 
