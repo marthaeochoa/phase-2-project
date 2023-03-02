@@ -1,11 +1,13 @@
 import React, {useState} from "react";
+import { useHistory } from "react-router-dom";
 
 function SongForm ({ onAddSong }) {
     const [formData, setFormData] = useState({
         title:"",
         artist:"",
         genre:" "
-    })
+    });
+    const history = useHistory();
 
     function handleOnChange(event){
         const { name, value } = event.target;
@@ -33,15 +35,10 @@ function SongForm ({ onAddSong }) {
     .then((newSong) => {
          onAddSong(newSong);
 
-    })
-
-    alert("Song Added")
-
-    setFormData({
-        title:"",
-        artist:"",
-        genre:" "
-    })
+        })
+        
+     alert(`${formData.title} by ${formData.artist} has been added!`)
+     history.push("/playlist")
    }
 
     return(
@@ -77,6 +74,7 @@ function SongForm ({ onAddSong }) {
             <option value="Alternative">Alternative</option>
             <option value="Reggaeton">Reggaeton</option>
             <option value="Rap">Rap</option>
+            <option value="Rock">Rock</option>
             
         </select>
 

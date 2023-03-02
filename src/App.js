@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import GenreFilter from './components/GenreFilter';
 import NavBar from './components/NavBar';
+import Home from './components/Home';
 import Playlist from './components/Playlist';
 import SongForm from './components/SongForm';
 
@@ -23,12 +24,21 @@ function App() {
   .then((songs) => setSongs(songs));
   }, [genre]);
 
-
   function onAddSong(newSong){
     setSongs(songs => {
       return [...songs, newSong]
     })
   }
+
+  function onSongDelete (songId) {
+    console.log('deleting a song', songId)
+    setSongs(songs=>{
+      return songs.filter(
+        originalSong => {
+          return originalSong !== songId;
+        })
+    })
+}
 
   
   return (
@@ -39,9 +49,15 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/">
-        <GenreFilter setGenre={setGenre} />
-        <Playlist songs={songs}/>
+        <Home />
         </Route>
+
+        <Route path="/playlist">
+
+        <GenreFilter setGenre={setGenre} />
+        <Playlist songs={songs} onSongDelete={onSongDelete} />
+        </Route>
+
         <Route path="/song-form">
         <SongForm onAddSong={onAddSong} />
         </Route>

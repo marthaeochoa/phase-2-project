@@ -1,7 +1,7 @@
 import React from "react";
 import SongItem from "./SongItem";
 
-function Playlist ({songs}) {
+function Playlist ({songs, onSongDelete}) {
 
 function renderSongs(songs){
 
@@ -10,6 +10,7 @@ function renderSongs(songs){
         <SongItem 
         key={song.id} 
         song={song} 
+        onSongDelete={onSongDelete}
         />
      )
     })
@@ -22,6 +23,7 @@ function renderSongs(songs){
                     <td className="headers"><h3>Title</h3></td>
                     <td className="headers"><h3>Artist</h3></td>
                     <td className="headers"><h3>Genre</h3></td>
+                    <td className="headers-button"></td>
              </tr>
              {renderSongs(songs)}
             </table>

@@ -1,14 +1,14 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
-import SongForm from "./SongForm";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
 
 
     return (
         <nav className="Nav-Bar">
-        <NavLink className="nav-button" exact to="/">Home</NavLink>
-        <NavLink className="nav-button" to="/song-form">Add New Song</NavLink>
+        <NavLink className="nav-button" activeClassName="active" exact to="/">Home</NavLink>
+        <NavLink className="nav-button" activeClassName="active" to="/song-form">Add New Song</NavLink>
+        <NavLink className="nav-button" activeClassName="active" to="playlist"> Playlist </NavLink>
         </nav>
     )
 }

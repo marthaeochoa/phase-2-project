@@ -10,7 +10,9 @@ function GenreFilter ({ setGenre }) {
             <button onClick={() => setGenre("Alternative")}>Alternative</button>
             <button onClick={() => setGenre("Reggaeton")}>Reggaeton</button>
             <button onClick={() => setGenre("Rap")}>Rap</button>
+            <button onClick={() => setGenre("Rock")}>Rock</button>
         </div>
+
     )
 }
 
