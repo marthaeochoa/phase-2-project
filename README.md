@@ -14,7 +14,7 @@ To view in your browser. (You will have to type `y` when prompted since localhos
 
 ## Usage
 
-Application opens up a Home tab. Once you read it and click on the `See Playlist` button, the playlist will appear on the screen.\
+Application opens up a Home tab. Once you read it and click on the `See Playlist` button, the playlist will appear on the screen.
 
 Over the playlist are filter buttons that allow you to filter the songs by genre.\
 On the right of each song is a delete button, which allows you to remove any song you want from this playlist.\
