@@ -31,13 +31,8 @@ function App() {
   }
 
   function onSongDelete (songId) {
-    console.log('deleting a song', songId)
-    setSongs(songs=>{
-      return songs.filter(
-        originalSong => {
-          return originalSong !== songId;
-        })
-    })
+    console.log('deleting a song', songId);
+    setSongs(songs => songs.filter(Song => Song.id !== songId))
 }
 
   

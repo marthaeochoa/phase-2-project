@@ -8,7 +8,7 @@ function NavBar() {
         <nav className="Nav-Bar">
         <NavLink className="nav-button" activeClassName="active" exact to="/">Home</NavLink>
         <NavLink className="nav-button" activeClassName="active" to="/song-form">Add New Song</NavLink>
-        <NavLink className="nav-button" activeClassName="active" to="playlist"> Playlist </NavLink>
+        <NavLink className="nav-button" activeClassName="active" to="/playlist/all"> Playlist </NavLink>
         </nav>
     )
 }
