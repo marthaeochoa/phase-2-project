@@ -7,7 +7,7 @@ function SongItem({ song, onSongDelete }) {
     function handleDelete () {
         alert(`Are you sure you want to delete ${title}? This action can not be undone.`)
         onSongDelete(id);
-        fetch(`http://localhost:3000/Songs/${id}`, {
+        fetch(`https://song-json.onrender.com/Songs/${id}`, {
             method: "DELETE"
         })
     }

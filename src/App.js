@@ -15,9 +15,9 @@ function App() {
   useEffect(() => {
     let url;
     if (genre) {
-      url = `http://localhost:3000/Songs?genre=${genre}`
+      url = `https://song-json.onrender.com/Songs?genre=${genre}`
     } else {
-      url = "http://localhost:3000/Songs"
+      url = "https://song-json.onrender.com/Songs"
     };
   fetch(url)
   .then(r => r.json())
