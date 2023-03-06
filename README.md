@@ -4,6 +4,10 @@ This application shows you what songs are in my current favorites playlist. It i
 
 ## Setting Up 
 
+You can visit the website [Here](https://main--graceful-bublanina-fed653.netlify.app/).
+
+OR
+
 You will need to fork and clone [This JSON server](https://github.com/marthaeochoa/json-server-template) repo into your machine and run it.
 
 Fork and clone this repo then cd into the file.\
