@@ -54,6 +54,10 @@ function App() {
         <Route path="/song-form">
         <SongForm onAddSong={onAddSong} />
         </Route>
+        
+        <Route path="*">
+          <h1>404 Not Found</h1>
+        </Route>
       </Switch>
     </div>
   );
