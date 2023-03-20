@@ -11,7 +11,7 @@ import SongForm from './components/SongForm';
 function App() {
   const [songs, setSongs] = useState([]);
   const [genre, setGenre] = useState("");
-
+  
   useEffect(() => {
     let url;
     if (genre) {
@@ -39,6 +39,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+
       <Switch>
         <Route exact path="/">
         <Home />

@@ -162,3 +162,9 @@ button.delete-button {
   height: 20px;
   text-align: center;
 }
+
+input.search{
+  width: 500px;
+  margin-bottom: 10px;
+  border-radius: 1px;
+}

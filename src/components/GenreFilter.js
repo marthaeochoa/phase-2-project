@@ -3,37 +3,39 @@ import { NavLink } from "react-router-dom"
 
 function GenreFilter ({ setGenre }) {
 
+
     return (
+        <section >
         <div className="filter">
-            <NavLink to={{pathname:"/playlist/all"}}>
+            <NavLink exact to={{pathname:"/playlist/all"}}>
                 <button onClick={() => setGenre("")} >All</button>
             </NavLink>
 
-            <NavLink to={{pathname: "/playlist/pop"}}>
+            <NavLink exact to={{pathname: "/playlist/pop"}}>
             <button onClick={() => setGenre("Pop")}>Pop</button>
             </NavLink>
 
-            <NavLink to={{pathname: "/playlist/rnb"}}>
+            <NavLink exact to={{pathname: "/playlist/rnb"}}>
             <button onClick={() => setGenre("RnB")}>RnB</button>
             </NavLink>
 
-            <NavLink to={{pathname: "/playlist/altnerative"}}>
+            <NavLink exact to={{pathname: "/playlist/altnerative"}}>
             <button onClick={() => setGenre("Alternative")}>Alternative</button>
             </NavLink>
 
-            <NavLink to={{pathname: "/playlist/reggaeton"}}>
+            <NavLink exact to={{pathname: "/playlist/reggaeton"}}>
             <button onClick={() => setGenre("Reggaeton")}>Reggaeton</button>
             </NavLink>
 
-            <NavLink to={{pathname: "/playlist/rnb"}} >
+            <NavLink exact to={{pathname: "/playlist/rap"}} >
             <button onClick={() => setGenre("Rap")}>Rap</button>
             </NavLink>
 
-            <NavLink to={{pathname: "/playlist/rock"}} >
+            <NavLink exact to={{pathname: "/playlist/rock"}} >
             <button onClick={() => setGenre("Rock")}>Rock</button>
             </NavLink>
         </div>
-
+        </section>
     )
 }
 

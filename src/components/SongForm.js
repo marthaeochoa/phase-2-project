@@ -19,7 +19,6 @@ function SongForm ({ onAddSong }) {
         })
     }
 
-    console.log(formData)
 
    function handleSubmit(event){
     event.preventDefault();
